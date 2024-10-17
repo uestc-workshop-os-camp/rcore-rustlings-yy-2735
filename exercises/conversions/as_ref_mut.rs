@@ -25,7 +25,8 @@ fn char_counter<T>(arg: T) -> usize {
 // TODO: Add the appropriate trait bound.
 fn num_sq<T>(arg: &mut T) {
     // TODO: Implement the function body.
-    ???
+    let val = arg.as_mut();
+    *val *= *val;
 }
 
 #[cfg(test)]
