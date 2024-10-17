@@ -4,13 +4,18 @@
 //
 // Execute `rustlings hint clippy3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+// ~I AM NOT DONE
 
 #[allow(unused_variables, unused_assignments)]
 fn main() {
     let my_option: Option<()> = None;
-    if my_option.is_none() {
-        my_option.unwrap();
+    match my_option{
+        None =>{
+            println!("Option is None");
+        },
+        Some(value) =>{
+            println!("Option is {:?}",value);
+        },
     }
 
     let my_arr = &[
@@ -19,7 +24,8 @@ fn main() {
     ];
     println!("My array! Here it is: {:?}", my_arr);
 
-    let my_empty_vec = vec![1, 2, 3, 4, 5].resize(0, 5);
+    let my_empty_vec : Vec<i32> = Vec::new();
+    vec![1, 2, 3, 4, 5].resize(0, 5);
     println!("This Vec is empty, see? {:?}", my_empty_vec);
 
     let mut value_a = 45;
