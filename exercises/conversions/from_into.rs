@@ -40,7 +40,7 @@ impl Default for Person {
 // If while parsing the age, something goes wrong, then return the default of
 // Person Otherwise, then return an instantiated Person object with the results
 
-// I AM NOT DONE
+// ~I AM NOT DONE
 
 impl From<&str> for Person {
     fn from(s: &str) -> Person {
@@ -60,7 +60,9 @@ impl From<&str> for Person {
 
         if let Ok(age) = parts[1].parse::<usize>(){
             Person{name,age}
-        }else}{}
+        }else{
+            Person::default()
+        }
     }
 }
 
